@@ -88,7 +88,7 @@ Sendkeys not working for when application is expecting from numeric Keyboard. <b
   }
 ```
 
-## Some essentials helper methods:
+## Some essentials helper methods
 
 ```java
   public static void tabByCoordinates(AppiumDriver driver, WebElement element, int fingers,

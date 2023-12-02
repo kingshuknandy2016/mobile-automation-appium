@@ -21,14 +21,13 @@ Here we have explained how to setup ***Mobile Automation*** using ***Appium*** f
 - [Debug Method To Detect Application Context And WebElement](#debug-method-to-detect-application-context-and-webelement)
 - [Other Common Methods](#other-common-methods)
 - [Get the BundleID of IOS inbuilt Apps](./MobileAutomationSolution.md#get-the-bundleid-of-ios-inbuilt-apps)
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
-- []()
+- [Datepicker without SendKeys](./MobileAutomationSolution.md#get-the-bundleid-of-ios-inbuilt-apps)
+- [Troubleshooting - Xpath not working](./MobileAutomationSolution.md#troubleshooting----xpath-not-working)
+- [Common issues with Tap Option and there solution](./MobileAutomationSolution.md#common-issues-with-tap-option-and-there-solution)
+- [Reset Application Data](./MobileAutomationSolution.md#reset-application-data)
+- [Sendkeys not working](./MobileAutomationSolution.md#sendkeys-not-working)
+- [Some essentials helper methods](./MobileAutomationSolution.md#some-essentials-helper-methods)
+
 
 ## Initial System Setup
 
