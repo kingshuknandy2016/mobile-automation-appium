@@ -1,6 +1,4 @@
-# Mobile Automation Troubleshooting and Solution
-
-### TROUBLESHOOTING - IOS  ** BUNDLE ID --HOW TO GET THE BUNDLE ID OF IOS INBUILT APPS
+## Get the BundleID of IOS inbuilt Apps
 
 These are from iPhone 4S iOS 5.0.1:
 ```java
@@ -17,7 +15,7 @@ These are from iPhone 4S iOS 5.0.1:
 	Clock:        com.apple.mobiletimer						
 ```
 
-### Datepicker without SendKeys:
+## Datepicker without SendKeys:
 ```java
 public static void selectYear(String Xpath, String year) {
       IOSElement element = (IOSElement) driver.findElementByXPath(Xpath);
@@ -44,14 +42,15 @@ public static void selectYear(String Xpath, String year) {
       }
   }
 ```
-### TROUBLESHOOTING -  XPATH NOT WORKING(UNABLE TO CLICK)
+## Troubleshooting -  Xpath not working
+Xpath not working(unable to click)<br>
 
 * Try for the Tap option ***AndroidDriver (driver)***
 ```java
 	driver.tap(fingers, element, duration);
 	driver.tap(fingers, x, y, duration);
 ```
-#### Common issues with Tap Option and there solution
+## Common issues with Tap Option and there solution
 * As trying to search element by its displayed text, there might be **white space** making mismatch. <br/>
   Please use **normalize-space()** function for xpath.<br/>
   
@@ -64,12 +63,13 @@ We can get the location of the element and add some digit to it to get away from
 If its **not visible** then perform the click operation once again
 
 
-### TROUBLESHOOTING -  RESET APPLICATION DATA
+## Reset Application Data
 ```java
 	Driver.resetApp();
 ```
 
-### Custom Template - Sendkeys not working for when application is expecting from numeric Keyboard
+## Sendkeys not working
+Sendkeys not working for when application is expecting from numeric Keyboard. <br>
 
  Creating a method which can press the key as per key sequence. 
  This is working good, please see execution video: https://www.screencast.com/t/hNZQIFxDm5 
@@ -88,24 +88,27 @@ If its **not visible** then perform the click operation once again
   }
 ```
 
-### Common Methods:
+## Some essentials helper methods:
 
 ```java
   public static void tabByCoordinates(AppiumDriver driver, WebElement element, int fingers,
       int duration) {
     driver.tap(fingers, element, duration);
   }
-
+```
+```java
   public static void tabByElement(AppiumDriver driver, WebElement element, int fingers,
       int duration) {
     Point point = element.getLocation();
     driver.tap(fingers, point.x, point.y, duration);
   }
-
+```
+```java
   public static void scrollToNativeElement1(AppiumDriver driver, WebElement element) {
     driver.scrollTo(element.getText().toString());
   }
-
+```
+```java
   public static void clickWebelement(WebElement element) throws InterruptedException {
     try {
       element.click();
@@ -114,7 +117,8 @@ If its **not visible** then perform the click operation once again
       element.click();
     }
   }
-
+```
+```java
   public static void clickWebelementOther(AppiumDriver driver, WebElement elementToBeClicked,
       WebElement elementNextPage) throws InterruptedException {
     elementToBeClicked.click();
@@ -125,7 +129,8 @@ If its **not visible** then perform the click operation once again
       elementToBeClicked.click();
     }
   }
-
+```
+```java
   public static void clickOnElement(AppiumDriver driver, WebElement elementToBeClicked) {
     if ((boolean) elementToBeClicked.getAttribute("clickable").equalsIgnoreCase("false")) {
       JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -133,17 +138,20 @@ If its **not visible** then perform the click operation once again
     }
     elementToBeClicked.click();
   }
-
+```
+```java
   public static void scrollToNativeElement(AppiumDriver driver, WebElement element) {
     driver.scrollTo(element.getText().toString());
     //driver.scrollToExact(arg0)	
   }
-
+```
+```java
   public static void scrollToHalfScreensize(AppiumDriver driver, int startx, int starty, int endx,
       int endy, int duration) {
     driver.swipe(startx, starty, endx, endy, duration);
   }
-
+```
+```java
   public static void swipeFromBottomToTop(AppiumDriver driver) throws InterruptedException {
     Dimension size = driver.manage().window().getSize();
     System.out.println("Size:" + size);
@@ -162,7 +170,8 @@ If its **not visible** then perform the click operation once again
     Thread.sleep(2000);
 
   }
-
+```
+```java
   public static void swipeFromTopToBottom(AppiumDriver driver) throws InterruptedException {
     Dimension size = driver.manage().window().getSize();
     System.out.println("Size:" + size);
@@ -181,7 +190,8 @@ If its **not visible** then perform the click operation once again
     Thread.sleep(2000);
 
   }
-
+```
+```java
   public static void swipeToNativeElement(AppiumDriver driver, WebElement elementStart,
       WebElement elementEnd, int duration) {
     int startx = driver.scrollTo(elementStart.getText()).getLocation().getX();
@@ -193,7 +203,8 @@ If its **not visible** then perform the click operation once again
     driver.swipe(startx, starty, endx, endy, duration);
   }
 }
-
+```
+```java
 public void scrollToElementAndTap(String name) throws InterruptedException {
 		AndroidElement nameOfEmp;
 		try {
@@ -206,7 +217,8 @@ public void scrollToElementAndTap(String name) throws InterruptedException {
 			scrollToElementAndTap(name);
 		}
 	}
-	
+```
+```java
 	public static void swipeFromBottomToTop() throws InterruptedException {
 		Dimension size = driver.manage().window().getSize();
 		System.out.println("Size:" + size);
@@ -225,7 +237,8 @@ public void scrollToElementAndTap(String name) throws InterruptedException {
 		driver.swipe(startx, endy, startx, starty, 1000);
 		// Thread.sleep(2000);
 	}
-	
+```
+```java	
 	public static AndroidElement getAndroidElement(String locator, String args) {
 		return (AndroidElement) driver.findElement(By.xpath(String.format(locator, args)));
 	}
@@ -263,7 +276,8 @@ public void scrollToElementAndTap(String name) throws InterruptedException {
 		}
 
 	}
-	
+```
+```java	
 	public static void scrollTillDisplayed(String eleText, String platform) {
 		boolean isElementDisplayed = false;
 		
@@ -289,7 +303,8 @@ public void scrollToElementAndTap(String name) throws InterruptedException {
 		}
 
 	}
-	
+```
+```java	
 	public static void swipeRight(WebElement ele) {
 		Point point = ele.getLocation();
 		int startx = point.getX();
@@ -300,7 +315,8 @@ public void scrollToElementAndTap(String name) throws InterruptedException {
 		((AppiumDriver) appiumDriver)
 				.swipe(startx, starty, endx, endy, 500);
 	}
-	
+```
+```java	
 	public static void swipHalfScreenUp() {
 
 		TouchAction touchAction =
@@ -309,7 +325,8 @@ public void scrollToElementAndTap(String name) throws InterruptedException {
 
 		touchAction.press(550, 1290).moveTo(550, 1120).waitAction(2000).release();
 	}
-	
+```
+```java	
 		public static void clickKeyBoardKey(String keyValue) {
 		try {
 			element.click();
@@ -322,7 +339,8 @@ public void scrollToElementAndTap(String name) throws InterruptedException {
 		}
 
 	}
-	
+```
+```java	
 	public static void selectFromSinglePicker(String text) {
 		try {
 			element.click();
@@ -331,7 +349,8 @@ public void scrollToElementAndTap(String name) throws InterruptedException {
 		}
 
 	}
-	
+```
+```java	
 	public static void scrollToEle(String exactText) {
 		try {
 			AppiumDriver appiumDriver ;
