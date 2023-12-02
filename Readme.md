@@ -15,7 +15,20 @@ Here we have explained how to setup ***Mobile Automation*** using ***Appium*** f
 - [Native Application Automation Simple Examples](#native-application-automation-simple-examples)
 - [Mobile Web Application Automation Simple Examples](#mobile-web-application-automation-simple-examples)
 - [Hybrid Application Automation Simple Examples](#hybrid-application-automation-simple-examples)
-- [Parallel Execution on different Mobile Platforms]()
+- [Parallel Execution on different Mobile Platforms](#parallel-execution-on-different-mobile-platforms)
+- [Multiple Apps Automation](#multiple-apps-automation)
+- [PageObjectModel For Android Pages](#pageobjectmodel-for-android-pages)
+- [Debug Method To Detect Application Context And WebElement](#debug-method-to-detect-application-context-and-webelement)
+- [Other Common Methods](#other-common-methods)
+- [Get the BundleID of IOS inbuilt Apps](./MobileAutomationSolution.md#get-the-bundleid-of-ios-inbuilt-apps)
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
 
 ## Initial System Setup
 
@@ -649,8 +662,6 @@ public class TestSuite1 {
 ```
 Please find the complete project from the [link](https://github.com/kingshuknandy2016/CompleteMobileAutomation/tree/master/src)
 
-Please refer [Mobile Automation Troubleshooting and Solution](https://github.com/kingshuknandy2016/DocsRepo/blob/master/Office3/MobileAutomationSolution.md)
-
-References:
-https://appiumpro.com/editions<br/>
-http://appium.io/docs/en/about-appium/intro/
+# References:
+* https://appiumpro.com/editions<br/>
+* http://appium.io/docs/en/about-appium/intro/
