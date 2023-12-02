@@ -8,12 +8,14 @@ There are 3 types of application available in android.<br>
 Here we have explained how to setup ***Mobile Automation*** using ***Appium*** for different applications in different types of mobile devices.<br>
 
 ## ❯ Table of Contents
-- [Initial System Setup](#-initial-system-setup)
-- [Ways to get App package and App activity in Android Device](#-scripts-and-tasks)
-- [Verify the App package and app name]()
-- [Dependency for Appium]()
-- [Native Application Automation Simple Examples]()
-- [Mobile Web Application Automation Simple Examples]()
+- [Initial System Setup](#initial-system-setup)
+- [Ways to get App package and App activity in Android Device](#ways-to-get-app-package-and-app-activity-in-android-device)
+- [Verify the App package and app name](#verify-the-app-package-and-app-name)
+- [Dependency for Appium](#dependency-for-appium)
+- [Native Application Automation Simple Examples](#native-application-automation-simple-examples)
+- [Mobile Web Application Automation Simple Examples](#mobile-web-application-automation-simple-examples)
+- [Hybrid Application Automation Simple Examples](#hybrid-application-automation-simple-examples)
+- [Parallel Execution on different Mobile Platforms]()
 
 ## Initial System Setup
 
@@ -195,7 +197,8 @@ public class BasicWebAppAutomation {
 }
 ```
 
-### Hybrid Application Automation Simple Examples
+## Hybrid Application Automation Simple Examples
+Yet to be implemented
 
 
 ## Parallel Execution on different Mobile Platforms
@@ -457,7 +460,7 @@ The Java Class
         }
 
 ```
-## PageObjectModel
+## PageObjectModel For Android Pages
 
 ```java
       package com.pageobject;
@@ -568,7 +571,7 @@ public class TestSuite1 {
 }
 ```
 
-### Debug Method To Detect Application Context And WebElement
+## Debug Method To Detect Application Context And WebElement
 ```java
    /**
 	 * @description : (DEBUG Method)Get all the Context Present in the APP
@@ -604,7 +607,7 @@ public class TestSuite1 {
 	}
 ```
 
-### Other Common Methods
+## Other Common Methods
 ```java
 /**
 	 * @description : This will scroll to specific Element if the element is visible
